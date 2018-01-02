@@ -1,0 +1,20 @@
+print('USD$' + str(1000))
+USD_to_GBP = 0.66
+USD_to_EUR = 0.77
+USE_to_JPY = 99.18 
+
+GBP_sign + '\u00A3'
+EUR_sign = '\20AC'
+JPY_sign = '\u00A5'
+INR_sign = dollars * USD_to_GBP
+euros = dollars * USD_to_EUR
+yen = dollars * USD_to_JPY
+rupees = dollars * USD_to_INR
+
+Print('Today, $' + str(dollars))
+print('converts to ' + GBP_sign + str(pounds))
+
+print('converts to ' + EUR_sign + str(euros))
+print('converts to ' + JPY_sign + str(yen))
+print('converts to ' + INR_sign + str(rupees))
+
