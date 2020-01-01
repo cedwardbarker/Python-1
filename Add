@@ -1,0 +1,276 @@
+# following Tutorials
+
+Functions
+
+def sayhi():
+    print("Hello User")
+
+print("Top")
+sayhi()
+print("Bottom")
+
+def say_hi(name):
+    print("Hello " + name)
+
+
+say_hi("Mike")
+say_hi("Steve")
+
+def say_hi(name, age):
+    print("Hello " + name + ", you are " + age)
+
+
+say_hi("Mike", "35")
+say_hi("Steve", "70")
+
+
+
+def say_hi(name, age):
+    print("Hello " + name + ", you are " + str(age))
+
+
+say_hi("Mike", 35)
+say_hi("Steve", 70)
+
+
+
+Return Statement
+
+def cube(num):
+    return num*num*num
+
+print(cube(3))
+
+
+def cube(num):
+    return num*num*num
+
+result = cube(4)
+print(result)
+
+If Statements
+
+I wake up
+If I'm hunger
+    I eat breakfast
+
+I leave my house
+if it's cloudy
+    I bring an umbrella
+otherwise
+    I bring sunglasses
+
+Im at a restaurant
+if I want meat
+    I order a steak
+otherwise if I want pasta
+    I order spaghetti & meatballs 
+otherwise
+    I order a salad.
+
+
+
+is_male = False
+
+if is_male:
+    print("You are a male")
+else:
+    print("You are not a male")
+
+is_male = True
+is_tall = False
+
+if is_male and is_tall:
+    print("You are a tall male or both")
+else:
+    print("You are either not male or not tall or both")
+
+
+is_male = False
+is_tall = False
+
+if is_male and is_tall:
+    print("You are a tall male or both")
+elif is_male and not(is_tall):
+    print("You are a short male")
+elif not(is_male) and is_tall:
+    print("You are not a male but are tall")
+else:
+    print("You are not a male or not tall")
+
+
+If Statement & Comparisons
+
+
+def max_num(num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+
+print(max_num(300, 40, 5))
+
+Calculator 
+
+
+num1 = float(input("Enter first number: "))
+op = input("Enter operator: ")
+num2 = float(input("Enter second number: "))
+
+if op == "+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "/":
+    print(num1 / num2)
+elif op == "*":
+    print(num1 * num2)
+else:
+    print("invalid Operator")
+
+Dictionary
+
+
+monthConversations = {
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sep": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December"
+
+}
+
+print(monthConversations.get("Luv", "Not a valid Key"))
+
+
+Whileloop
+
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+print("Done with loop")
+
+
+Building a Guessing Game
+
+secret_word = "giraffe"
+guess = ""
+
+while guess != secret_word:
+    guess = input("Enter guess: ")
+
+print("You win!")
+
+Game 2
+
+
+secret_word = "giraffe"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+while guess != secret_word and not(out_of_guesses):
+    if guess_count < guess_limit:
+        guess = input("Enter guess: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("Out of Guesses, YOU LOSE!")
+else:
+    print("You win!")
+
+For loop
+
+
+
+for letter in "Cory":
+    print(letter)
+
+
+
+friends = ["Jim", "Karen", "Kevin"]
+for letter in friends:
+    print(letter)
+
+friends = ["Jim", "Karen", "Kevin"]
+
+for index in range(len(friends)):
+    print(friends[index])
+friends = ["Jim", "Karen", "Kevin"]
+
+for index in range(5):
+    if index == 0:
+        print("first Iteration")
+    else:
+        print("Not first")
+
+
+Exponent Function
+
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+
+print(raise_to_power(2, 3))
+
+
+2D Lists & Nested Loops
+
+number_grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
+
+]
+
+for row in number_grid:
+    for col in row:
+        print(col)
+
+Build a Translator 
+
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+        if letter in "AEIOUaeiuo":
+            translation = translation + "g"
+        else:
+            translation = translation + letter
+
+    return translation
+
+print(translate(input("Enter a phrase: ")))
+
+
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+        if letter.lower() in "aeiuo":
+            if letter.isupper():
+                translation = translation + "G"
+            else:
+                translation = translation + "g"
+
+        else:
+            translation = translation + letter
+    return translation
+
+print(translate(input("Enter a phrase: ")))
